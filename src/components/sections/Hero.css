@@ -1,0 +1,106 @@
+.hero {
+  position: relative;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: white;
+  overflow: hidden;
+}
+
+.hero-top-text {
+  position: absolute;
+  top: 426px;
+  left: 0;
+  width: 100%;
+  text-align: left;
+  padding-left: 15%;
+}
+
+.hero-title {
+  position: absolute;
+  bottom: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: Unbounded, sans-serif;
+  font-size: 12vw; /* адаптивно растягиваем на всю ширину */
+  font-weight: 900;
+  letter-spacing: 0.05em;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.hero-button {
+  position: absolute;
+  top: 436px;
+  right: 10%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: #DBFE01;
+  color: black;
+  font-weight: bold;
+  font-size: 18px;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.hero-button:hover {
+  background-color: #5940FE;
+  color: white;
+}
+
+.hero-marquee {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: yellow;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee {
+  background-color: #DBFE01;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.marquee-content {
+  display: flex;
+  animation: marquee 15s linear infinite;
+  white-space: nowrap;
+  font-size: 48px;
+  font-weight: bold;
+  color: #000;
+}
+
+.marquee-content span {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 25px;
+}
+
+.marquee-content span::after {
+  content: "•";
+  margin-left: 10px;
+  font-size: 48px;
+  line-height: 1;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
